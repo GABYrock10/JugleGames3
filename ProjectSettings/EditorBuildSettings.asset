@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: b65f4876ce73be04cbd06a58cc0bcc83
   - enabled: 1
-    path: Assets/Scenes/Gaby.unity
+    path: Assets/Scenes/Gaby2.unity
     guid: 11c8d652e28c0944f826130b4396342a
   m_configObjects: {}

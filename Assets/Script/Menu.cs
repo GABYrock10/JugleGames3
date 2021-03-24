@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class Menu : MonoBehaviour
 {
+    public AudioMixer audioMixer;
 
     public void PlayGame()
     {
@@ -16,6 +18,11 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("Quit!");
         Application.Quit();
+    }
+
+    public void SetVolume (float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
     }
     /*public void PlayGame()
     {

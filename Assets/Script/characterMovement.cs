@@ -12,6 +12,8 @@ public class characterMovement : MonoBehaviour
 
     Vector3 moveDirection = Vector3.zero;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +25,25 @@ public class characterMovement : MonoBehaviour
     {
         if (ChrController.isGrounded)
         {
+            anim.SetBool("isJumping", false);
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
             moveDirection *= speed;
 
             if (Input.GetButton("Jump"))
             {
+                anim.SetBool("isJumping", true);
                 moveDirection.y = jumpSpeed;
             }
         }
         else
         {
 
+            moveDirection.x = Input.GetAxis("Horizontal") * speed;
         }
         if(Input.GetAxis("Horizontal") != 0)
         {
+            anim.SetBool("isRunning", true);
+
             float xScale = Mathf.Abs(transform.localScale.x);
 
             if (Input.GetAxis("Horizontal") < 0)
@@ -47,7 +54,12 @@ public class characterMovement : MonoBehaviour
             else
             {
                 transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+
             }
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
         }
 
         moveDirection.y -= Gravity * Time.deltaTime;
