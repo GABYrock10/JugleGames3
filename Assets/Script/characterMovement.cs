@@ -63,7 +63,14 @@ public class characterMovement : MonoBehaviour
         }
 
         moveDirection.y -= Gravity * Time.deltaTime;
+        if (Input.GetKey(KeyCode.F))
+        {
 
-        ChrController.Move(moveDirection * Time.deltaTime);
+        }
+        else
+        {
+            ChrController.Move(moveDirection * Time.deltaTime);
+        }
+        
     }
 }
