@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefab/Materials/Sans titre.mat.meta
 guid: ac3b09a07c2924e4882bb93922a544ce
+=======
+guid: 94a8df68ffd98f643ad58dd1c1167207
+>>>>>>> 450d065b3469530dd0a3287cb04904edabab3096:Assets/Prefab/New Material.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
